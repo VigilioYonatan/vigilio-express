@@ -1,5 +1,5 @@
 { "name": "@vigilio/express",
-    "version": "1.3.31",
+    "version": "1.3.33",
     "description": "create web apps in server ",
     "bin": "./bin/cli.js",    
     "author": "Vigilio",
