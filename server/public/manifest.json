@@ -1,0 +1,31 @@
+{
+  "_vendor-e6375efe.js": {
+    "file": "assets/vendor-e6375efe.js"
+  },
+  "components/Counter.vue": {
+    "file": "assets/Counter-d8f75bd3.js",
+    "imports": [
+      "_vendor-e6375efe.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "components/Counter.vue"
+  },
+  "main.css": {
+    "file": "assets/main-f31c0111.css",
+    "src": "main.css"
+  },
+  "main.ts": {
+    "css": [
+      "assets/main-f31c0111.css"
+    ],
+    "dynamicImports": [
+      "components/Counter.vue"
+    ],
+    "file": "assets/main-b1bc9fb1.js",
+    "imports": [
+      "_vendor-e6375efe.js"
+    ],
+    "isEntry": true,
+    "src": "main.ts"
+  }
+}
