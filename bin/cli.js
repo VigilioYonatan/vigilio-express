@@ -20,7 +20,7 @@ if ( process.argv[3].startsWith("-p=")) {
 }
 
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/VigilioYonatan/viigilio-express ${repoName}`;
-const installDepsClientCommand = `rm package.json && cd ${repoName} && cd client && ${pack} install`;
+const installDepsClientCommand = `cd ${repoName} && rm package.json && cd client && ${pack} install`;
 const installDepsServeCommand = `cd .. && cd server && ${pack} install`;
 console.log(`Creating repository: ${repoName}`);
 
