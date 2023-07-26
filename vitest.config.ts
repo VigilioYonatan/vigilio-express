@@ -6,8 +6,11 @@ export default defineConfig({
     plugins: [swc.vite()],
     resolve: {
         alias: {
-            "~": path.resolve(__dirname, "src"),
-            "@": path.resolve(__dirname, "src", "services"),
+            "~": path.resolve(__dirname, "app"),
+            "@": path.resolve(__dirname, "app", "services"),
         },
     },
+    test:{
+        include:["./app/**/*.test.ts"]
+    }
 });

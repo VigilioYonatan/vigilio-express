@@ -1,4 +1,4 @@
-import express, { NextFunction, Request, Response } from "express";
+import express from "express";
 import cors from "cors";
 import passport from "passport";
 import path from "path";
@@ -37,14 +37,14 @@ export class Server {
 	middlewares() {
 		this.app.use(cors());
 		this.app.use(express.json());
-		this.app.use(express.static(path.resolve(__dirname,"..","..","public")))
+		this.app.use(express.static(path.resolve(__dirname, "..", "..", "public")));
 		this.app.set("view engine", "pug");
 		this.app.set(
 			"views",
-			path.resolve(__dirname, "..", "..", "..", "client", "views"),
+			path.resolve(__dirname, "..", "..", "resources", "views"),
 		);
 		this.app.use(client());
-		
+
 		connectDB();
 	}
 
