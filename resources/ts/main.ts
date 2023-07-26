@@ -4,7 +4,8 @@ const btnLess = document.getElementById("btnMinus") as HTMLButtonElement;
 const btnPlus = document.getElementById("btnPlus") as HTMLButtonElement;
 const result = document.getElementById("result") as HTMLParagraphElement;
 
-let numero = 0;
+let numero = 6;
+
 prinResult();
 
 btnPlus.addEventListener("click", () => {

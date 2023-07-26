@@ -1,11 +1,10 @@
 {
     "name": "@vigilio/express",
-    "type": "module",
     "description": "create web apps with @vigilio/express now",
     "scripts": {
         "start:client": "vite",
         "start:serve": "cross-env NODE_ENV=development  ts-node-dev --respawn -r tsconfig-paths/register  app/main.ts",
-        "build:serve": "rimraf dist && tsc --project tsconfig.build.json",
+        "build:serve": "rimraf dist && tsc  --project tsconfig.build.json ",
         "build:client": "tsc --project ./resources/tsconfig.json && vite build ",
         "start": "cross-env NODE_ENV=production node dist/main.js",
         "test": "vitest",

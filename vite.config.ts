@@ -6,7 +6,7 @@ dotenv.config()
 
 export default defineConfig({
     plugins: [
-        liveReload([path.resolve(__dirname, "./resources/views/**/*.pug"),path.resolve(__dirname,"./resources/ts/**/.ts")]),
+        liveReload([path.resolve(__dirname, "./resources/views/**/*.pug"),path.resolve(__dirname,"./resources/ts/**/*.ts")]),
         splitVendorChunkPlugin(),
     ],
     root: "resources",
@@ -29,8 +29,6 @@ export default defineConfig({
         strictPort: true,
         port: Number(process.env.VITE_PORT),
         host: true,
-        // watch: {
-        //     usePolling: true,
-        // },
+
     },
 });
