@@ -17,19 +17,11 @@ html(lang="en")
             p(class="text-white")
                 | <b>@vigilio/express </b> is a fullstack framework to create web apps
             span(class="text-2xl uppercase font-bold text-yellow-400") OUT NOW THE BETA!!!      
-        div( class="bg-black my-6 p-4 bg-opacity-40 w-[300px] mx-auto rounded-md" )
-            div( class="flex justify-center items-center gap-2 mt-6" )
-                img( alt="vite-logo" loading="lazy" src="/vite.png" width="120" height="120" )
-                img( alt="vue-logo" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" width="90" height="90" )
-            div( class="flex flex-col gap-4 my-8 py-2" )
-                p( class="text-white font-bold text-center" ) Counter
-                p( class="text-center text-white font-bold uppercase text-4xl" id="result") 0
-            div( class="flex gap-3 justify-center" )
-                button(  type="button" id="btnPlus"  class="bg-black text-white px-4 py-2 rounded-md bg-opacity-80") +
-                button(  type="button" id="btnMinus"  class="bg-black text-white px-5 py-2 rounded-md bg-opacity-80") -
+        .vue-app
+            counter-app(:user=JSON.stringify(user) )
         div(class="flex justify-center items-center my-6")
             a(href="https://www.facebook.com/Jhonyvig/" class="text-2xl font-bold text-white hover:text-blue-800" target="_blank") Facebook
-        div(class="flex px-3 justify-center gap-8 items-center flex-wrap")
+        div(class="flex px-3 justify-center gap-8 items-center flex-wrap max-w-4xl mx-auto")
             div(class="bg-blue-800 bg-opacity-80 flex-1 min-w-[250px] max-w-[300px] py-6 rounded-md")
                 span(class="text-white font-bold uppercase text-3xl text-center block") Controller
             div(class="bg-yellow-400 bg-opacity-80 flex-1 min-w-[250px] max-w-[300px] py-6 rounded-md")
