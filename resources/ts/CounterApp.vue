@@ -9,7 +9,7 @@ const baseURL=import.meta.env.VITE_URL
     <div class="bg-black my-6 p-4 bg-opacity-20 max-w-[500px] w-full mx-auto rounded-md">
         <div class="flex justify-center items-center gap-2 mt-6">
             <img :src="`${baseURL}/vite.png`"  alt="vite-logo" width="120" height="120">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"  alt="vite-logo" width="90" height="90">
+            <img :src="`${baseURL}/vue.png`"  alt="vite-logo" width="95" height="90">
         </div>
         <div class="flex flex-col gap-4 my-8 py-2">
             <p class="text-white font-bold text-center">Counter</p>
