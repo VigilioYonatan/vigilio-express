@@ -9,7 +9,7 @@ export class AppController {
 	constructor(private readonly appService: AppService) {}
 	@Get("/")
 	index(@Res() res: Response) {
-		// return this.appService.index();
-		return res.render("index");
+		const user= this.appService.index();
+		return res.render("index",{user});
 	}
 }
