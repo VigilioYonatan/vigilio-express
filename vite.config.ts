@@ -17,6 +17,7 @@ export default defineConfig({
         // RESOURCES ALIAS
         alias: {
             "~": path.resolve(__dirname, "resources", "ts"),
+            "#": path.resolve(__dirname, "resources", "ts","services"),
             "vue":"vue/dist/vue.esm-bundler.js"
         },
     },

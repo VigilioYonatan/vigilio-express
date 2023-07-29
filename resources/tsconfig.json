@@ -19,7 +19,8 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "paths": {
-            "~/*": ["./ts/*"]
+            "~/*": ["./ts/*"],
+            "#/*": ["./ts/services/*"],
         },
     },
     "include": ["./ts/**/*.ts","./ts/**/*.vue"],
