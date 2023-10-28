@@ -18,8 +18,8 @@
         "skipLibCheck": true, /* Skip type checking all .d.ts files. */
         "baseUrl": ".",
         "paths": {
+            "@/*": ["./app/services/*"],
             "~/*": ["./app/*"],
-            "@/*": ["./app/services/*"]
         }
     },
     "include": ["app"]

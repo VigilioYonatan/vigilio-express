@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import session from "express-session";
 import passport from "passport";
+import compression from 'compression'
 import { ERROR_MIDDLEWARE, attachControllers } from "@decorators/express";
 import { enviroments } from "~/config/enviroments.config";
 import { connectDB } from "~/config/db.config";
@@ -12,6 +13,7 @@ import { client } from "@vigilio/express-core/client";
 import { apiRouters } from "~/routers/api.router";
 import { webRouters } from "~/routers/web.router";
 import { authRouters } from "~/routers/auth.router";
+import { middlewareRoute } from "~/lib/middleware-route";
 
 export class Server {
 	public readonly app: express.Application = express();
@@ -45,12 +47,24 @@ export class Server {
             // if (!usuario) return done({ message: "error authenticated" });
             // return done(null, usuario);
         });
+		
 	}
 
 	middlewares() {
+		this.app.use(
+            compression({
+                threshold: 10000,
+                filter: (req, res) => {
+                    if (req.headers["x-no-compression"]) {
+                        return false;
+                    }
+                    return compression.filter(req, res);
+                },
+            })
+        );
 		this.app.use(express.json());
 		this.app.use(express.static(path.resolve(__dirname, "..", "..", "public")));
-		this.app.set("view engine", "pug");
+		this.app.set("view engine", "ejs");
 		this.app.set(
 			"views",
 			path.resolve(__dirname, "..", "..", "resources", "views"),
@@ -73,6 +87,7 @@ export class Server {
 		this.app.use("/", webRouter);
 		this.app.use("/auth", authRouter);
 		this.app.use("/api", apiRouter);
+		this.app.use(middlewareRoute);
 	}
 
 	listen() {

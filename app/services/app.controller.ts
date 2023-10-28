@@ -1,7 +1,8 @@
 import { Injectable } from "@decorators/di";
-import { Controller, Get, Res } from "@decorators/express";
+import { Controller, Get, Params, Res } from "@decorators/express";
 import { AppService } from "./app.service";
 import { Response } from "express";
+import {string,number,transform,parse,coerce,nan,custom} from "valibot"
 
 @Injectable()
 @Controller("/")
@@ -10,6 +11,12 @@ export class AppController {
 	@Get("/")
 	index(@Res() res: Response) {
 		const user= this.appService.index();
-		return res.render("index",{user});
+		return res.render("web/index",{user});
+	}
+	@Get("/:id")
+	show(@Params("id") id:string) {
+		// biome-ignore lint/suspicious/noConsoleLog: <explanation>
+		console.log(id);
+		
 	}
 }

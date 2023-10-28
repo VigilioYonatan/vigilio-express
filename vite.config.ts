@@ -7,7 +7,7 @@ dotenv.config()
 
 export default defineConfig({
     plugins: [
-        liveReload([path.resolve(__dirname, "./resources/views/**/*.pug")]),
+        liveReload([path.resolve(__dirname, "./resources/views/**/*.ejs")]),
         splitVendorChunkPlugin(),
         vue()
     ],
@@ -18,7 +18,7 @@ export default defineConfig({
         alias: {
             "~": path.resolve(__dirname, "resources", "ts"),
             "#": path.resolve(__dirname, "resources", "ts","services"),
-            "vue":"vue/dist/vue.esm-bundler.js"
+            vue:"vue/dist/vue.esm-bundler.js"
         },
     },
     build: {

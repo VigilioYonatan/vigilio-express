@@ -8,8 +8,8 @@ const baseURL=import.meta.env.VITE_URL
 <template>
     <div class="bg-black my-6 p-4 bg-opacity-20 max-w-[500px] w-full mx-auto rounded-md">
         <div class="flex justify-center items-center gap-2 mt-6">
-            <img :src="`${baseURL}/vite.png`"  alt="vite-logo" width="120" height="120">
-            <img :src="`${baseURL}/vue.png`"  alt="vite-logo" width="95" height="90">
+            <img :src="`${baseURL}/images/vite.png`"  alt="vite-logo" width="120" height="120">
+            <img :src="`${baseURL}/images/vue.png`"  alt="vite-logo" width="95" height="90">
         </div>
         <div class="flex flex-col gap-4 my-8 py-2">
             <p class="text-white font-bold text-center">Counter</p>
