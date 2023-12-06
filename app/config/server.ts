@@ -3,8 +3,8 @@ import path from "path";
 import session from "express-session";
 import passport from "passport";
 import compression from 'compression'
+import  enviroments from "~/config/enviroments.config";
 import { ERROR_MIDDLEWARE, attachControllers } from "@decorators/express";
-import { enviroments } from "~/config/enviroments.config";
 import { connectDB } from "~/config/db.config";
 import { ServerErrorMiddleware } from "@vigilio/express-core/handler";
 import { Container } from "@decorators/di";
